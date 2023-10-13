@@ -25,19 +25,56 @@ nav a {
     text-decoration: none;
 }
 
-/* Phần Giới thiệu */
-#about {
+/* Phần tiêu đề */
+.tieude
+{
+    font-size: 60px;
+}
+/* Phần tiêu đề phụ */
+.tieudephu
+{
+    color: red;
+    font-size: 40px;
+}
+/* Phần giới thiệu */
+.gioithieu
+{
+    text-align: left;
+}
+/* Phần Tin Tức */
+#news {
     background-color: #f4f4f4;
     padding: 20px;
 }
 
-/* Phần Các ngành đào tạo */
-#courses {
+/* Phần Câu Lạc Bộ */
+#clubs {
     padding: 20px;
+    text-align: center
 }
 
 /* Phần Liên hệ */
 #contact {
     background-color: #f4f4f4;
     padding: 20px;
+}
+.facebook-button {
+    background-color: #1877f2; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.facebook-button a {
+    text-decoration: none;
+    color: #fff; 
+    display: flex;
+    align-items: center;
+}
+
+.facebook-button img {
+    width: 24px; 
+    margin-right: 10px; 
 }
