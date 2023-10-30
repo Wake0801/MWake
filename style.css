@@ -9,10 +9,28 @@ header {
   background-color: #d3504a;
   color: #fff;
   text-align: center;
-  padding: 20px;
-  
 }
 
+.dautrang
+{
+  display: flex;
+  justify-content: space-around;
+}
+.logo
+{
+  position: relative;
+  left: -50px;
+}
+.tieude
+{
+  display: flex;
+  align-items: flex-end;
+}
+.dangnhapdangki
+{
+  position: relative;
+  right: -50px;
+}
 header h1
 {
   font-size: 36px;
@@ -22,7 +40,9 @@ header h1
 
 .signup
 {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 16px;
 }
 nav ul {
   list-style-type: none;
