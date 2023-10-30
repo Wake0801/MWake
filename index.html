@@ -1,122 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trường ĐH Công nghệ Thông tin (PTIT)</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-            header {
-                background-color: red;
-                color: white; 
-            }
-            h1 {
-                font-family: Arial, sans-serif;
-            }
-            #about {
-                background-color: #f4f4f4;
-            }
-            #bangtin1
-            {
-                width: 400px;
-                position: relative;
-                left: 100px;
-                margin: 0;
-            }
-            #bangtin2
-            {   
-                width: 400px;
-                position: relative;
-                left: 650px;
-                top: -477px;
-                margin: 0;
-            }
-            #bangtin3
-            {
-                width: 400px;
-                position: relative;
-                left: 1200px;
-                top: -954px;
-                margin: 0;
-            }
-     </style>
+  <title>Rạp phim TTLH</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="tieude">Trường ĐH Công nghệ Thông tin (PTIT)</h1>
-        <img src="https://portal.ptit.edu.vn/wp-content/uploads/2022/09/logo.jpg" alt="">
-        <nav>
-            <ul>
-                <li><a href="https://portal.ptit.edu.vn/gioi-thieu/">Giới thiệu</a></li>
-                <li><a href="https://portal.ptit.edu.vn">Giáo dục và đào tạo</a></li>
-                <li><a href="https://tuyensinh.ptit.edu.vn">Tuyển sinh</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="news" style="height: 600px;">
-        <h2>Tin tức</h2>
-        <div id="bangtin1">
-            <a href="https://portal.ptit.edu.vn/hoc-vien-cong-nghe-buu-chinh-vien-thong-va-dai-hoc-tay-nguyen-ky-thoa-thuan-hop-tac-trong-cac-linh-vuc-dao-tao-nghien-cuu-khoa-hoc-va-chuyen-doi-so/">
-            <img src="https://portal.ptit.edu.vn/wp-content/uploads/2023/10/6-1.jpg" alt="" width="400" height="400">
-        </a>
-            <p>HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG VÀ ĐẠI HỌC TÂY NGUYÊN KÝ THỎA THUẬN HỢP TÁC TRONG CÁC LĨNH VỰC ĐÀO TẠO, NGHIÊN CỨU KHOA HỌC VÀ CHUYỂN ĐỔI SỐ</p>
+  <header>
+    <h1><img src="logo.png" alt="logo.rapphimTTLH" style="width: 100px;"></h1>
+    <nav class="signup colum_layout">
+    <ul>
+      <li><a href="1">đăng nhập</a></li>
+      <li><a href="1">đăng kí</a></li>
+    </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Phim đang chiếu</a></li>
+        <li><a href="#">Phim sắp chiếu</a></li>
+        <li><a href="#">Lịch chiếu</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="hero">
+    <h2>Chào mừng đến với Rạp phim TTLH</h2>
+    <p style="font-size: 30px;">Tựa hồn vào thế giới của chúng tôi: Nơi mọi câu chuyện trở nên sống động!</p>
+  </section>
+  
+  <section class="phim-hot">
+    <h2 style="font-size: 50px;">---------------------Phim hot---------------------</h2>
+    <main class="page-content">
+      <div class="card">
+        <div class="content">
+          <h2 class="title">FNAF MOVIE</h2>
+          <p class="copy">Năm đêm kinh hoàng là một bộ phim điện ảnh Mỹ thuộc thể loại kinh dị – siêu nhiên – giật gân sắp ra mắt vào năm 2023 được Emma Tammi đạo diễn từ kịch bản mà cô cùng viết với Scott Cawthon và Seth Cuddeback.</p>
+          <button class="btn"><a href="https://www.youtube.com/watch?v=0VH9WCFV6XQ">Xem Trailer</a></button>
         </div>
-        <div id="bangtin2">
-            <a href="https://portal.ptit.edu.vn/wp-content/uploads/2023/10/7.jpg">
-                <img src="https://portal.ptit.edu.vn/wp-content/uploads/2023/10/2-6.jpg" alt="" width="400" height="400">
-            </a>
-            <p>BỘ TRƯỞNG BỘ CÔNG NGHỆ VÀ TRUYỀN THÔNG NƯỚC CỘNG HÒA DÂN CHỦ NHÂN DÂN LÀO THĂM VÀ LÀM VIỆC VỚI HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</p>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">NHÀ BÀ NỮ</h2>
+          <p class="copy">Nhà bà Nữ là một bộ phim điện ảnh chính kịch, gia đình của Việt Nam năm 2023 do Trấn Thành sản xuất kiêm đạo diễn. Bộ phim do Đỗ Hoàng Vũ, quản lý của Trấn Thành và Hari Won đảm nhận vai trò đồng sản xuất.</p>
+          <button class="btn"><a href="https://www.youtube.com/watch?v=IkaP0KJWTsQ">Xem trailer</a></button>
         </div>
-        <div id="bangtin3">
-            <a href="https://portal.ptit.edu.vn/sinh-vien-hoc-vien-cong-nghe-buu-chinh-vien-thong-co-tro-ly-ao-ho-tro-hoc-tap/">
-                <img src="https://portal.ptit.edu.vn/wp-content/uploads/2023/10/1-2.jpg" alt="" width="400" height="400">
-            </a>
-            <p>SINH VIÊN HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG CÓ TRỢ LÝ ẢO HỖ TRỢ HỌC TẬP</p>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">SPIDER-MAN: ACROSS THE SPIDER-VERSE</h2>
+          <p class="copy">Người Nhện: Du hành Vũ trụ Nhện là một bộ phim hoạt hình máy tính siêu anh hùng của Mỹ năm 2023 có nhân vật Marvel Comics Miles Morales / Spider-Man, được sản xuất bởi Columbia Pictures và Sony Pictures Animation cùng với Marvel Entertainment và được phân phối bởi Sony Pictures Releasing.</p>
+          <button class="btn"><a href="https://www.youtube.com/watch?v=shW9i6k8cB0">Xem Trailer</a></button>
         </div>
-        </section>
-    <section id="clubs">
-        <h2 class="tieude">Câu lạc bộ</h2>
-        <p class="tieudephu"  > * Câu Lạc Bộ Bóng Chuyền PTIT - HCM *</p>
-        <p class="gioithieu">Bạn là sinh viên năm nhất đam mê bóng chuyền nhưng mới lên còn bỡ ngỡ.
-            Bạn thích chơi bóng chuyền nhưng bạn không có năng khiếu.
-            Bạn là tuyển thủ quốc gia bóng chuyền nhưng chưa tìm được CLB tốt để rèn luyện. 😂😂😂
-            Dù bạn là ai và bạn có như thế nào,dù bạn có biết chơi hay không biết chơi đi chăng nữa chỉ cần bạn thích và đam mê là hãy đến với CLB Bóng chuyền PTIT, cứ 4h30 mỗi buổi chiều, tại sân bóng chuyền của Học Viện Hoàng Gia nằm trong lòng KTX nữ, với sân bãi như trải thảm, đèn điện như ban ngày, bạn sẽ thỏa sức đam mê và thể hiện tinh thần yêu thích bóng chuyền của mình. CLB có cả 2 đội bóng Nam và Nữ với những gương mặt nam thanh nữ tú. Những chàng trai với body 6 múi rất chuẩn men. 😂😂😂 Vừa rèn luyện sức khỏe vừa ngắm trai đẹp còn gì bằng 🤣🤣🤣
-            Hãy tham gia CLB, Chúng tôi CLB Bóng Chuyền PTIT luôn chào đón các bạn.</p>
-        <a href="https://www.facebook.com/CauLacBoBongChuyenPTIT">
-            <img src="https://scontent.fsgn6-2.fna.fbcdn.net/v/t39.30808-6/359435555_609150587994402_3533898661350360704_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Zr2TymbGW3UAX9c8yEn&_nc_ht=scontent.fsgn6-2.fna&oh=00_AfA4Mv_GKGBF3EnNAyuvPYL0UzaOVTEaCzRSQCEBBsmeqw&oe=652EB7C7" alt="" height="400" width="400">
-        </a>
-        <p class="tieudephu"> * Câu lạc bộ guitar *</p>
-        <p class="gioithieu">[CHÀO ĐÓN TÂN SINH VIÊN]
-            🎙 Nhằm tổ chức chương trình chào đón các bạn Tân sinh viên K64 & tổ chức giao lưu với các bạn sinh viên trong trường. CLB Guitar UTC2 gửi lời mời trân trọng nhất đến các bạn đến tham quan gian hàng giới thiệu của bọn mình nhaaa. 
-            📍 Thông tin chi tiết: 
-             • Thời gian: Từ 08h đến 10h sáng ngày 17/09/2023
-             • Địa điểm : Kí túc xá ĐH GTVT Phân hiệu tại TP.HCM
-            🔊 Hứa hẹn nhiều tiết mục và trò chơi giao lưu dành cho các bạn. Hãy sắp xếp thời gian và đến quẩy cùng GUF nhé!🥳
-        </p>
-        <a href="https://www.facebook.com/clbguitarutc2">
-            <img src="https://scontent.fsgn6-2.fna.fbcdn.net/v/t39.30808-6/309671888_184170434119268_6802823840914717417_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gM5riCDxlgAAX9y2Kg0&_nc_ht=scontent.fsgn6-2.fna&oh=00_AfDcGCBprODVSXeGoDURkNY_G7ws0Tn3QJYA5TL14K_QOA&oe=652DED5D" alt="" height="400" width="400" >
-        </a>
-        <p class="tieudephu"> * Câu lạc bộ kết nối *</p>
-        <p class="gioithieu">
-            “Kết nối bạn bè – Chung tay góp sức”
-            Đó chính là tôn chỉ của Kết Nối – CLB được thành lập ngày 10/5/2009 hoạt động với mục tiêu:
-            Kết nối cộng đồng, chia sẻ tình yêu thương đến những hoàn cảnh khó khăn trong xã hội, là ngôi nhà chung của tất cả những bạn sinh viên có cùng một tấm lòng thiện nguyện và nhân ái.
-            14 năm hoạt động, hơn 50 chương trình thiện nguyện được tổ chức, kết nạp hơn 1000 thành viên từ khi thành lập. Đó chính là Kết Nối, là trái tim và tình yêu thương to lớn nơi mái trường PTIT. 
-            Cùng xem, Kết Nối đã làm được gì trong video ngay dưới đây nhé !
-            </p>
-            <a href="https://www.facebook.com/ketnoiclub">
-                <img src="https://scontent.fsgn6-1.fna.fbcdn.net/v/t39.30808-6/375858226_693834449435449_3790926289023541016_n.png?stp=dst-png_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YbCYv131FNcAX8HV_x4&_nc_ht=scontent.fsgn6-1.fna&oh=00_AfCUwaM1hy02Ia5PhiS_qDRvdjBlUJKtsW7J5xiJ7DrgTg&oe=652E57E1" alt="" height="400" width="400">
-            </a>
-    </section>
-    <section id="contact">
-        <h2>Liên hệ</h2>
-        <p>Địa chỉ: Học viện cơ sở tại TP. Hồ Chí Minh: 11 Nguyễn Đình Chiểu, P. Đa Kao, Q.1 TP Hồ Chí Minh</p>
-        <button class="facebook-button">
-            <a href="https://www.facebook.com/HocvienPTIT">
-                <img src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" alt="Facebook">
-                Facebook
-            </a>
-        </button>
-    </section>
+      </div>
+    </main>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Rạp phim TTLH.</p>
+  </footer>
 </body>
 </html>
