@@ -1,0 +1,129 @@
+{% extends "app/index.html" %}
+{% load static %}
+{% block payment %}
+<html lang="en">
+  <head>
+    <style>
+      body {
+          padding: 0px;
+          box-sizing: border-box;
+      }
+      .wrap {
+        width: 500px;
+        margin: 0 auto;
+      }
+      .checkout, .order-list{
+        color:black;
+        border: 1px solid #e9eeea;
+      }
+      .checkout{
+        margin-bottom: 16px;
+      }
+      .title{
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        padding: 22px 0;
+        font-size: 22px;
+        background-color: #e9eeea;
+        margin-bottom: 16px;
+      }
+      .item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+        padding-bottom: 20px;
+      }
+      .confirm {
+        display: flex;
+        justify-content: center;
+      }
+      .order-list{
+        font-size: 14px;
+      }
+      .product-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 16px;
+      }
+      .product-item img {
+        padding: 0 16px;
+        width: 35%;
+      }
+      .content h3{
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
+      .content p{
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .content span{
+        padding-left: 8px;
+      }      
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        display: flex;
+        justify-content: center;
+      }
+      .button_product {
+        display: flex;
+        justify-content: center;
+        }
+  </style>
+  </head>
+  <body>
+    <div class="wrap">
+        <div class="checkout"> 
+    <h1 class="title">CHECKOUT YOUR ORDER</h1>
+      <ul>
+        <li class="item">
+              <p>{{product.name}}</p>
+              <p>${{product.price}}</p>
+        </li>
+        <li class="item">
+            <p>{{product.name}}</p>
+            <p>${{product.price}}</p>
+        </li>
+        <li class="confirm">
+        {{paypal.render}}
+        </li>
+        </ul>
+        </div>  
+        <div class="order-list">
+            <h2 class="title">OTHER PRODUCT</h2>
+            <ul>
+                <li class="product-item">
+                    <img src="{{product.image.url}}" alt="">
+                    <div class="content">
+                        <h3>{{product.name}}</h3>
+                        <p class="text-bold">${{product.price}}</p>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="{{product.image.url}}" alt="">
+                    <div class="content">
+                        <h3>{{product.name}}</h3>
+                        <p class="text-bold">${{product.price}}</p>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="{{product.image.url}}" alt="">
+                    <div class="content">
+                        <h3>{{product.name}}</h3>
+                        <p class="text-bold">${{product.price}}</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="button_product">
+                <button type="submit" >Return</button>
+               </div>
+        </div>
+    </div>
+  </body>
+  </html>
+{% endblock %}
