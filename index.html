@@ -1,58 +1,236 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Rạp phim TTLH</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul class="dautrang">
-        <li class="logo"><img src="logo.png" alt="logo.rapphimTTLH" style="width: 100px;"></li>
-        <li class="tieude"><a href="#">Trang chủ</a></li>
-        <li class="tieude"><a href="#">Phim đang chiếu</a></li>
-        <li class="tieude"><a href="#">Phim sắp chiếu</a></li>
-        <li class="tieude"><a href="#">Lịch chiếu</a></li>
-        <li class="tieude"><a href="#">Giới thiệu</a></li>
-        <li class="dangnhapdangki"><a href="#">đăng nhập / đăng kí</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <section class="hero">
-    <h2>Chào mừng đến với Rạp phim TTLH</h2>
-    <p style="font-size: 30px;">Tựa hồn vào thế giới của chúng tôi: Nơi mọi câu chuyện trở nên sống động!</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinema TTLH</title>
+    <link href="{% static 'app/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'app/css/global.css' %}" rel="stylesheet">
+    <link href="{% static 'app/css/index.css'  %}" rel="stylesheet">
+    <link href="{% static 'app/css/events.css'  %}" rel="stylesheet">
+    <link href="{% static 'app/css/seats.css'%}" rel="stylesheet">
+    <link href="{% static 'app/css/search.css'%}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/font-awesome.min.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <script src="{% static 'app/js/jquery-2.1.1.min.js' %}"></script>
+    <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+  </head>
+  <!-- search -->
+  <style> 
+    .search-box1{
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+    }
+    .input-search{
+      height: 50px;
+      width: 50px;
+      border-style: none;
+      padding: 10px;
+      font-size: 18px;
+      letter-spacing: 2px;
+      outline: none;
+      border-radius: 25px;
+      transition: all .5s ease-in-out;
+      background-color: rgba(255, 255, 255, 0);
+      padding-right: 40px;
+      color:#fff;
+    }
+    .input-search::placeholder{
+      color:rgba(255,255,255,.5);
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
+    .btn-search{
+      width: 50px;
+      height: 50px;
+      border-style: none;
+      font-size: 20px;
+      font-weight: bold;
+      outline: none;
+      cursor: pointer;
+      border-radius: 50%;
+      position: absolute;
+      right: 0px;
+      color:#ffffff ;
+      background-color:transparent;
+      pointer-events: painted;  
+    }
+    .btn-search:focus ~ .input-search{
+      width: 300px;
+      border-radius: 0px;
+      background-color: transparent;
+      border-bottom:1px solid rgba(255,255,255,.5);
+      transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    }
+    .input-search:focus{
+      width: 300px;
+      border-radius: 0px;
+      background-color: transparent;
+      border-bottom:1px solid rgba(255,255,255,.5);
+      transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    }
+  </style>
+  <!-- User -->
+  <style>
+    .search-box2{
+      position: absolute;
+    }
+    .user-box {
+      width:100%;
+    }
+    .user-id {
+      height: 10px;
+      width: 10px;
+      position: absolute;
+    }
+    .dropdown-menu {
+      list-style-type: none;
+      display: none;  
+      background: #555; /* Non-rgba compatable browsers */
+      background: rgba(33, 33, 33, 0.9);
+      width: 50px;
+    }
+    
+    .user-id:hover .dropdown-menu {
+      display: block;
+      position: absolute;
+      top: auto;
+      width: 50px;
+    }
+    
+    .dropdown-menu ul li {
+      display: block;
+      width:100%;
+      font-size: 1em;
+      color: #fff;
+    }
+    
+    .dropdown-menu ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .dropdown-menu ul li:hover {
+      background: #333;
+      color: #fff;
+    }
+  </style>
+
+ <body>
+  <section id="top">
+   <div class="container">
+    <div class="row">
+      <div class="top_2 clearfix">
+        <div class="col-sm-3">
+         <div class="top_2_left">
+          <h1><a href="{% url 'home' %}">TTLH CINEMA</a></h1>
+         </div>
+        </div>
+       </div>      
+      <div class="top_1 text-right clearfix">
+              <ul>
+                <li class="search-box1 border_none_1">
+                  <button class="btn-search"><img src ="{% static 'app/img/search-interface-symbol.png' %}" width="30" height="30"/></button>
+                  <input type="text" class="input-search" placeholder="Type to Search...">
+                </li>
+                <li class="border_none_1"></li>
+                <li class="border_none_1"></li>
+                <li class="search-box2 border_none_1 user-id">
+                  <button class="btn-search"><img src ="{% static 'app/img/user.png' %}" width="30" height="30" />
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li class="border_none_1">Profile</li>
+                        <li class="border_none_1">History</li>
+                        <li class="border_none_1">Log Out</li>
+                      </ul>
+                    </div>
+                  </button>
+                </li>
+                
+              </ul>
+                <ul>
+                {% if request.user.is_authenticated %}
+                <a  href="" ><li class="border_none_1" >Hello {{request.user}}</li></a>
+                
+                {% else %}
+                <a  href="{% url "signin" %}" ><li class="border_none_1" >Log in</li></a>
+		            <a  href="{% url "signup" %}" ><li class="border_none_1" >Sign up</li></a>
+                {% endif %}
+                
+              </ul>
+            </div>
+    </div>
+   </div>
   </section>
-  
-  <section class="phim-hot">
-    <h2 style="font-size: 50px;">---------------------Phim hot---------------------</h2>
-    <main class="page-content">
-      <div class="card">
-        <div class="content">
-          <h2 class="title">FNAF MOVIE</h2>
-          <p class="copy">Năm đêm kinh hoàng là một bộ phim điện ảnh Mỹ thuộc thể loại kinh dị – siêu nhiên – giật gân sắp ra mắt vào năm 2023 được Emma Tammi đạo diễn từ kịch bản mà cô cùng viết với Scott Cawthon và Seth Cuddeback.</p>
-          <button class="btn"><a href="https://www.youtube.com/watch?v=0VH9WCFV6XQ">Xem Trailer</a></button>
+  <section id="header" class="clearfix cd-secondary-nav">
+        <div class="container">
+         <div class="row">
+          <div class="header_main clearfix">
+            <nav class="navbar navbar-default">
+              <div class="navbar-header">
+               <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="{% url 'home' %}">TTLH <span>CINEMA</span></a>
+              </div>
+              <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                 <li><a class="font_tag" href="{% url 'home' %}">HOME</a></li>
+                 <li><a class="font_tag" href="{% url 'movie' %}">MOVIE</a></li>
+                 <li><a class="font_tag" href="{% url 'products' %}">PRODUCT and EVENTS</a></li>
+                 <li><a class="font_tag border_none_1" href="{% url 'about' %}">ABOUT TTLH</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+         </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">NHÀ BÀ NỮ</h2>
-          <p class="copy">Nhà bà Nữ là một bộ phim điện ảnh chính kịch, gia đình của Việt Nam năm 2023 do Trấn Thành sản xuất kiêm đạo diễn. Bộ phim do Đỗ Hoàng Vũ, quản lý của Trấn Thành và Hari Won đảm nhận vai trò đồng sản xuất.</p>
-          <button class="btn"><a href="https://www.youtube.com/watch?v=IkaP0KJWTsQ">Xem trailer</a></button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">SPIDER-MAN: ACROSS THE SPIDER-VERSE</h2>
-          <p class="copy">Người Nhện: Du hành Vũ trụ Nhện là một bộ phim hoạt hình máy tính siêu anh hùng của Mỹ năm 2023 có nhân vật Marvel Comics Miles Morales / Spider-Man, được sản xuất bởi Columbia Pictures và Sony Pictures Animation cùng với Marvel Entertainment và được phân phối bởi Sony Pictures Releasing.</p>
-          <button class="btn"><a href="https://www.youtube.com/watch?v=shW9i6k8cB0">Xem Trailer</a></button>
-        </div>
-      </div>
-    </main>
   </section>
+  <!-- home -->
+  {% block home %}{% endblock home %}
+  {% block about %}{% endblock %}
+  {% block product %}{% endblock product %}
   
-  <footer>
-    <p>&copy; 2023 Rạp phim TTLH.</p>
+   <!-- movie -->
+  {% block movie_page %}{% endblock movie_page %}
+  {% block detail_page %}{% endblock detail_page %}
+  {% block product_order %}{% endblock product_order %}
+  
+  <!-- Ticket-->
+  {% block seats %}{% endblock seats %}
+  {% block cart %}{% endblock cart %}
+  {% block payment %}{% endblock payment %}
+  <!-- User -->
+  
+  <!--footer-->
+
+  <footer id="footer_bottom" style="position: relative; width: 100%; text-align: center;">
+    <p> © 2023 <a href="{% url 'about' %}">TTLH Team</a>. Welcome to TTLH Cinema </p>
   </footer>
-</body>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    
+    /*****Fixed Menu******/
+    var secondaryNav = $('.cd-secondary-nav'),
+       secondaryNavTopPosition = secondaryNav.offset().top;
+      $(window).on('scroll', function(){
+        if($(window).scrollTop() > secondaryNavTopPosition ) {
+          secondaryNav.addClass('is-fixed');	
+        } else {
+          secondaryNav.removeClass('is-fixed');
+        }
+      });	
+      
+    });
+    </script>
+ </body>
 </html>
+ 
